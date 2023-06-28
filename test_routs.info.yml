@@ -1,0 +1,5 @@
+name: Custom Test Routs
+type: module
+description: Module to learn and test routs
+package: Custom
+core_version_requirement: ^9 || ^10
