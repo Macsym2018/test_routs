@@ -2,5 +2,8 @@ test_roure.test_path:
   path: 'test-path'
   defaults:
     _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Path'
+  requirements:
+    _access: 'TRUE'
 
 
