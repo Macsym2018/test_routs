@@ -49,3 +49,14 @@ test_routs.test_entity_form:
     _title: 'Test Entity Form'
   requirements:
     _permission: 'test access content'
+
+test_routs.test_title_arguments:
+  path: 'test-title-arguments'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Title'
+    _title_arguments:
+      title: 'Test In Title Argument'
+    _title_callback: '\Drupal\test_routs\Controller\TestRoutsController::contentTitle'
+  requirements:
+    _access: 'TRUE'
