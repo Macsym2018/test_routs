@@ -19,4 +19,15 @@ class TestRoutsController extends ControllerBase {
     return $build;
   }
 
+  /**
+   * Returns a render-able array for a test page.
+   */
+  public function access() {
+    $build = [
+      '#markup' => $this->t('Hello Access!'),
+    ];
+    return $build;
+  }
+
+
 }

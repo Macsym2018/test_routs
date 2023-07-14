@@ -6,4 +6,12 @@ test_roure.test_path:
   requirements:
     _access: 'TRUE'
 
+test_roure.test_access:
+  path: 'test-access'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::access'
+    _title: 'Test Path'
+  requirements:
+    permissions: 'test access content'
+
 
