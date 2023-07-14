@@ -1,4 +1,4 @@
-test_roure.test_path:
+test_routs.test_path:
   path: 'test-path'
   defaults:
     _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
@@ -6,12 +6,20 @@ test_roure.test_path:
   requirements:
     _access: 'TRUE'
 
-test_roure.test_access:
+test_routs.test_access:
   path: 'test-access'
   defaults:
     _controller: '\Drupal\test_routs\Controller\TestRoutsController::access'
     _title: 'Test Path'
   requirements:
-    permissions: 'test access content'
+    _permission: 'access content'
+
+test_routs.test_form:
+  path: 'test-form'
+  defaults:
+    _form: '\Drupal\test_routs\Form\TestRoutsForm'
+    _title: 'Test Form'
+  requirements:
+    _permission: 'test access content'
 
 
