@@ -22,4 +22,16 @@ test_routs.test_form:
   requirements:
     _permission: 'test access content'
 
+test_routs.test_view:
+  path: 'test-view/{node_id}'
+  defaults:
+    _entity_view: 'node.full'
+    _title: 'Test View'
+  requirements:
+    _permission: 'test access content'
+  options:
+    parameters:
+      node_id:
+        type: 'entity:node'
+
 
