@@ -34,7 +34,7 @@ test_routs.test_view:
       node_id:
         type: 'entity:node'
 
-test_routs.test_entity-list:
+test_routs.test_entity_list:
   path: 'test-list'
   defaults:
     _entity_list: 'user_role'
@@ -42,3 +42,10 @@ test_routs.test_entity-list:
   requirements:
     _permission: 'test access content'
 
+test_routs.test_entity_form:
+  path: 'test-entity-form/{node}'
+  defaults:
+    _entity_form: 'node.default'
+    _title: 'Test Entity Form'
+  requirements:
+    _permission: 'test access content'
