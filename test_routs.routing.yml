@@ -69,3 +69,13 @@ test_routs.test_role:
   requirements:
     _access: 'TRUE'
     _role: 'administrator'
+
+test_routs.test_cache:
+  path: 'test-cache'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Cache'
+  requirements:
+    _access_user_register: 'TRUE'
+  options:
+    no_cache: TRUE
