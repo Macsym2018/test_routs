@@ -1,0 +1,81 @@
+test_routs.test_path:
+  path: 'test-path'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Path'
+  requirements:
+    _access: 'TRUE'
+
+test_routs.test_access:
+  path: 'test-access'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::access'
+    _title: 'Test Path'
+  requirements:
+    _permission: 'access content'
+
+test_routs.test_form:
+  path: 'test-form'
+  defaults:
+    _form: '\Drupal\test_routs\Form\TestRoutsForm'
+    _title: 'Test Form'
+  requirements:
+    _permission: 'test access content'
+
+test_routs.test_view:
+  path: 'test-view/{node_id}'
+  defaults:
+    _entity_view: 'node.full'
+    _title: 'Test View'
+  requirements:
+    _permission: 'test access content'
+  options:
+    parameters:
+      node_id:
+        type: 'entity:node'
+
+test_routs.test_entity_list:
+  path: 'test-list'
+  defaults:
+    _entity_list: 'user_role'
+    _title: 'Test List'
+  requirements:
+    _permission: 'test access content'
+
+test_routs.test_entity_form:
+  path: 'test-entity-form/{node}'
+  defaults:
+    _entity_form: 'node.default'
+    _title: 'Test Entity Form'
+  requirements:
+    _permission: 'test access content'
+
+test_routs.test_title_arguments:
+  path: 'test-title-arguments'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Title'
+    _title_arguments:
+      title: 'Test In Title Argument'
+    _title_callback: '\Drupal\test_routs\Controller\TestRoutsController::contentTitle'
+  requirements:
+    _access: 'TRUE'
+
+test_routs.test_role:
+  path: 'test-role'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Title'
+  requirements:
+    _access: 'TRUE'
+    _role: 'administrator'
+
+test_routs.test_cache:
+  path: 'test-cache'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Cache'
+  requirements:
+    _access_user_register: 'TRUE'
+  options:
+    no_cache: TRUE
