@@ -60,3 +60,12 @@ test_routs.test_title_arguments:
     _title_callback: '\Drupal\test_routs\Controller\TestRoutsController::contentTitle'
   requirements:
     _access: 'TRUE'
+
+test_routs.test_role:
+  path: 'test-role'
+  defaults:
+    _controller: '\Drupal\test_routs\Controller\TestRoutsController::content'
+    _title: 'Test Title'
+  requirements:
+    _access: 'TRUE'
+    _role: 'administrator'
